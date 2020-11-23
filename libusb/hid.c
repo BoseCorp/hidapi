@@ -1215,7 +1215,7 @@ int HID_API_EXPORT hid_send_feature_report(hid_device *dev, const unsigned char 
 		1000/*timeout millis*/);
 
 	if (res < 0)
-		return -1;
+		return res;
 
 	/* Account for the report ID */
 	if (skipped_report_id)
